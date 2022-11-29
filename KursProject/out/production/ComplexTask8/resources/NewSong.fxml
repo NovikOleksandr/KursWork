@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="342.0" style="-fx-background-color: #0d0230;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewSongController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0230" height="450.0" layoutX="19.0" layoutY="19.0" strokeType="INSIDE" width="304.0">
+         <stroke>
+            <LinearGradient endX="0.8712121356617321" endY="0.3371211976716013" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.7835867404937744" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color green="0.7835867404937744" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6811164617538452" green="0.4018000066280365" blue="0.9800000190734863" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Label layoutX="48.0" layoutY="47.0" text="Введіть інформацію про нову пісню" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NameField" layoutX="70.0" layoutY="108.0" prefHeight="27.0" prefWidth="193.0" promptText="Назва пісні" style="-fx-background-color: #0d0230; -fx-border-color: #553df5; -fx-text-inner-color: #e8e8e8;">
+         <effect>
+            <DropShadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.3333333432674408" green="0.239215686917305" blue="0.9607843160629272" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="DurationField" layoutX="67.0" layoutY="222.0" prefHeight="27.0" prefWidth="194.0" promptText="Тривалість (формат hh:mm:ss)" style="-fx-background-color: #0d0230; -fx-border-color: #387fff; -fx-text-inner-color: #e8e8e8;">
+         <effect>
+            <DropShadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.21960784494876862" green="0.49803921580314636" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="AuthorField" layoutX="69.0" layoutY="165.0" prefHeight="27.0" prefWidth="194.0" promptText="Автор" style="-fx-background-color: #0d0230; -fx-border-color: #3c4ae1; -fx-text-inner-color: #e8e8e8;">
+         <effect>
+            <DropShadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.23529411852359772" green="0.29019609093666077" blue="0.8823529481887817" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="LinkField" layoutX="66.0" layoutY="337.0" prefHeight="27.0" prefWidth="194.0" promptText="Посилання (додатково)" style="-fx-background-color: #0d0230; -fx-border-color: #a6a6a6; -fx-text-inner-color: #e8e8e8;">
+         <effect>
+            <DropShadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.6509804129600525" green="0.6509804129600525" blue="0.6509804129600525" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Button fx:id="Accept" layoutX="48.0" layoutY="401.0" mnemonicParsing="false" onAction="#AcceptValues" style="-fx-background-color: #0d0230; -fx-border-color: #990bff;" text="Підтвердити" textFill="#990bff">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6000000238418579" green="0.04313725605607033" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="Cancel" layoutX="206.0" layoutY="401.0" mnemonicParsing="false" onAction="#ToMain" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #0d0230; -fx-border-color: #a525e8;" text="Скасувати" textFill="#a525e8">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6470588445663452" green="0.14509804546833038" blue="0.9098039269447327" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <ChoiceBox fx:id="StyleChoice" layoutX="66.0" layoutY="284.0" prefHeight="27.0" prefWidth="194.0" style="-fx-border-color: #a5a3a6; -fx-background-color: #a29eb0;">
+         <effect>
+            <DropShadow height="35.0" radius="17.0" width="35.0">
+               <color>
+                  <Color red="0.6470588445663452" green="0.6392157077789307" blue="0.6509804129600525" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ChoiceBox>
+      <Text fx:id="WarningText1" fill="#ff6363" layoutX="85.0" layoutY="148.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заповніть будь ласка це поле" />
+      <Text fx:id="WarningText2" fill="#ff6363" layoutX="85.0" layoutY="205.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заповніть будь ласка це поле" />
+      <Text fx:id="WarningText3" fill="#ff6363" layoutX="78.0" layoutY="262.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Повторіть введення будь ласка" />
+      <Text fx:id="WarningText4" fill="#ff6363" layoutX="122.0" layoutY="324.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Виберіть стиль" />
+   </children>
+</AnchorPane>

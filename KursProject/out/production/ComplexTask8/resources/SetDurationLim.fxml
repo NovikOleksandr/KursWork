@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="476.0" style="-fx-background-color: #0d0230;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DurationSuggestController">
+   <children>
+      <Label layoutX="97.0" layoutY="45.0" prefHeight="26.0" prefWidth="299.0" text="Задайте межі тривалості композицій" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Text fx:id="ParseProblem1" fill="#fa5246" layoutX="61.0" layoutY="134.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Помилка введення" wrappingWidth="122.39216613769531" />
+      <TextField fx:id="MinField" layoutX="30.0" layoutY="88.0" prefHeight="27.0" prefWidth="184.0" promptText="Мінімім (формат hh:mm:ss)" style="-fx-background-color: #0d0230; -fx-border-color: #8d58ef; -fx-text-inner-color: #e8e8e8;">
+         <effect>
+            <DropShadow height="26.0" radius="12.5" width="26.0">
+               <color>
+                  <Color red="0.5529412031173706" green="0.3450980484485626" blue="0.9372549057006836" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="MaxField" layoutX="264.0" layoutY="88.0" prefHeight="27.0" prefWidth="191.0" promptText="Максимум (формат hh:mm:ss)" style="-fx-background-color: #0d0230; -fx-border-color: #c95eff; -fx-text-inner-color: #e8e8e8;">
+         <effect>
+            <DropShadow height="26.0" radius="12.5" width="26.0">
+               <color>
+                  <Color red="0.7411764860153198" green="0.3686274588108063" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Text fx:id="MaxMinProblem" fill="#fa5246" layoutX="265.0" layoutY="134.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Максимум має бути більшим мінімума">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="ParseProblem2" fill="#fa5246" layoutX="310.0" layoutY="134.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Помилка введення" />
+      <Label layoutX="237.0" layoutY="89.0" prefHeight="26.0" prefWidth="11.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="AcceptButton" layoutX="101.0" layoutY="150.0" mnemonicParsing="false" onAction="#Accept" style="-fx-background-color: #0d0230; -fx-border-color: #4099ff;" text="Підтвердити" textFill="#4099ff">
+         <effect>
+            <DropShadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.250980406999588" green="0.6000000238418579" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="CancelButton" layoutX="296.0" layoutY="150.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #0d0230; -fx-border-color: #3e88ff;" text="Скасувати" textFill="#3e88ff">
+         <effect>
+            <DropShadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.24313725531101227" green="0.5333333611488342" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Line endX="193.93328857421875" endY="3.814697265625E-6" layoutX="241.0" layoutY="27.0" startX="-189.5333251953125" startY="3.814697265625E-6" strokeWidth="2.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6352941393852234" green="0.250980406999588" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.24313725531101227" green="0.5333333611488342" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="193.93328857421875" endY="3.814697265625E-6" layoutX="240.0" layoutY="195.0" startX="-189.5333251953125" startY="3.814697265625E-6" strokeWidth="2.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4703703820705414" green="0.6027777791023254" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6352941393852234" green="0.250980406999588" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+   </children>
+</AnchorPane>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Accordion fx:id="MainAccordion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="549.0" style="-fx-background-color: #0d0230;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+  <panes>
+    <TitledPane fx:id="DeletedPane" text="Deleted" textFill="#eb4bfa">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0d0230;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0230" height="318.0" layoutX="23.0" layoutY="23.0" strokeType="INSIDE" width="488.0">
+                     <stroke>
+                        <LinearGradient endX="0.13636362913883093" endY="0.337121175997185" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.0784313753247261" green="0.5176470875740051" blue="0.7372549176216125" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5963859558105469" green="0.29321637749671936" blue="0.7263157963752747" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Text fill="WHITE" layoutX="109.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="На даний момент список вилучених порожній" textAlignment="CENTER" wrappingWidth="329.33675384521484">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="RestoreButton" disable="true" layoutX="200.0" layoutY="356.0" mnemonicParsing="false" onAction="#Restore" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b6cf0;" text="R" textFill="#2b6cf0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.42352941632270813" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Button fx:id="DeleteButton" disable="true" layoutX="246.0" layoutY="356.0" mnemonicParsing="false" onAction="#Delete" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b80f0;" text="D" textFill="#2b80f0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.501960813999176" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <ListView fx:id="DeletedView" editable="true" fixedCellSize="48.0" layoutX="29.0" layoutY="32.0" opacity="0.0" prefHeight="299.0" prefWidth="473.0" style="-fx-background-color: #0f0338;" />
+                  <Button fx:id="ClearButton" disable="true" layoutX="293.0" layoutY="356.0" mnemonicParsing="false" onAction="#Clear" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b6cf0;" text="C" textFill="#2b6cf0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.42352941632270813" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="MusicPane" prefHeight="466.0" prefWidth="582.0" text="Music" textFill="#31b7dc">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0d0230;">
+               <children>
+                  <Button fx:id="Exit" layoutX="474.0" layoutY="365.0" mnemonicParsing="false" onAction="#Exit" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #0f0338; -fx-border-color: #c952e7;" text="Exit" textFill="#c952e7">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.7882353067398071" green="0.32156863808631897" blue="0.9058823585510254" />
+                           </color>
+                        </DropShadow>
+                     </effect></Button>
+                  <Button fx:id="Input" layoutX="400.0" layoutY="365.0" mnemonicParsing="false" onAction="#InputAction" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #0f0338; -fx-border-color: #c952e7;" text="Input" textFill="#c952e7">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.7461520433425903" green="0.27812865376472473" blue="0.8631578683853149" />
+                           </color>
+                        </DropShadow>
+                     </effect></Button>
+                  <Button fx:id="Save" disable="true" layoutX="326.0" layoutY="365.0" mnemonicParsing="false" onAction="#SaveAction" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #0f0338; -fx-border-color: #a42bf0;" text="Save" textFill="#a42bf0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.6431372761726379" green="0.16862745583057404" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect></Button>
+                  <Button fx:id="MusStyle" disable="true" layoutX="443.0" layoutY="125.0" mnemonicParsing="false" onAction="#ByStyle" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #0f0338; -fx-border-color: #5987f4;" text="ByStyle" textFill="#5987f4">
+                     <effect>
+                        <DropShadow height="30.0" radius="14.5" width="30.0">
+                           <color>
+                              <Color red="0.3490196168422699" green="0.529411792755127" blue="0.95686274766922" />
+                           </color>
+                        </DropShadow>
+                     </effect></Button>
+                  <Button fx:id="MusDuration" disable="true" layoutX="444.0" layoutY="73.0" mnemonicParsing="false" onAction="#GetByDuration" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #0f0338; -fx-border-color: #1294e0;" text="ByDuration" textFill="#1b9ce7">
+                     <effect>
+                        <DropShadow height="16.0" radius="7.5" width="16.0">
+                           <color>
+                              <Color red="0.10588235408067703" green="0.6117647290229797" blue="0.9058823585510254" />
+                           </color>
+                        </DropShadow>
+                     </effect></Button>
+                  <Button fx:id="NewSong" layoutX="445.0" layoutY="26.0" mnemonicParsing="false" onAction="#NewSong" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #0f0338; -fx-border-color: #12bee0;" text="NewSong" textFill="#00cbff">
+                     <effect>
+                        <DropShadow height="30.0" radius="14.5" width="30.0">
+                           <color>
+                              <Color green="0.7960784435272217" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0230" height="320.0" layoutX="20.0" layoutY="26.0" strokeType="INSIDE" width="388.0">
+                     <stroke>
+                        <LinearGradient endX="0.6060606205102169" endY="0.7121211976716013" startX="0.04545454274524342" startY="0.4924242785482696">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.0784313753247261" green="0.5176470875740051" blue="0.7372549176216125" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5963859558105469" green="0.29321637749671936" blue="0.7263157963752747" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Text fill="WHITE" layoutX="66.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="На даний момент список композицій порожній" wrappingWidth="318.13680267333984">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
+                  <Button fx:id="Help" layoutX="20.0" layoutY="365.0" mnemonicParsing="false" onAction="#HelpMenu" onDragDetected="#HelpMenu" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #0f0338; -fx-border-color: #5368e5;" text="Help" textFill="#5368e5">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.32549020648002625" green="0.40784314274787903" blue="0.8980392217636108" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <ListView fx:id="MusicView" editable="true" fixedCellSize="48.0" layoutX="24.0" layoutY="36.0" opacity="0.0" prefHeight="299.0" prefWidth="378.0" style="-fx-background-color: #0f0338;" />
+                  <Button fx:id="PlayButton" disable="true" layoutX="444.0" layoutY="232.0" mnemonicParsing="false" onAction="#Play" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b39f0;" text="P" textFill="#2b39f0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.2235294133424759" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Button fx:id="RemoveButton" disable="true" layoutX="481.0" layoutY="232.0" mnemonicParsing="false" onAction="#Remove" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b5af0;" text="R" textFill="#2b5af0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.3529411852359772" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Text fx:id="LenText" fill="WHITE" layoutX="100.0" layoutY="383.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="MusShuffle" disable="true" layoutX="443.0" layoutY="174.0" mnemonicParsing="false" onAction="#Shuffle" prefHeight="13.0" prefWidth="78.0" style="-fx-background-color: #0f0338; -fx-border-color: #665af2;" text="Shuffle" textFill="#665af2">
+                     <effect>
+                        <DropShadow height="30.0" radius="14.5" width="30.0">
+                           <color>
+                              <Color red="0.4000000059604645" green="0.3529411852359772" blue="0.9490196108818054" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+  </panes>
+</Accordion>

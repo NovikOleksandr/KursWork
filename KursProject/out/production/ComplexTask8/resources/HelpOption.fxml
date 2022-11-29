@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Accordion fx:id="Accordion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="783.0" style="-fx-background-color: #0d0230;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HelpController">
+  <panes>
+    <TitledPane fx:id="Commands" animated="false" text="Команди" textFill="#369ff4">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0d0230;">
+               <children>
+                  <Button layoutX="635.0" layoutY="322.0" mnemonicParsing="false" onAction="#ToMain" prefHeight="47.0" prefWidth="82.0" style="-fx-background-color: #0d0230; -fx-border-color: #5ca5ff;" text="Main" textFill="#5ca5ff">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.3607843220233917" green="0.6470588445663452" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="26.0" layoutY="14.0" text="У головному меню:" textFill="#31b7dc">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="42.0" layoutY="63.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b39f0;" text="P" textFill="#2b39f0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.2235294133424759" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Button layoutX="42.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b5af0;" text="R" textFill="#2b5af0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.3529411852359772" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Text fill="WHITE" layoutX="106.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кнопка Play - відтворення пісні. Якщо у пісні нема посилання, то буде необхідно його ввести.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="106.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кнопка Remove - вилучає пісню зі списка та заносить її у список вилучених.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="26.0" layoutY="177.0" text="При перегляді вилучених:" textFill="#eb4bfa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="42.0" layoutY="228.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b6cf0;" text="R" textFill="#2b6cf0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.42352941632270813" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Button layoutX="42.0" layoutY="277.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b80f0;" text="D" textFill="#2b80f0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.501960813999176" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Button layoutX="42.0" layoutY="330.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="38.0" style="-fx-background-color: #0f0338; -fx-border-color: #2b6cf0;" text="C" textFill="#2b6cf0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.16862745583057404" green="0.42352941632270813" blue="0.9411764740943909" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Text fill="WHITE" layoutX="106.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кнопка Restrore - відновлює пісню, повертає її назад у основний список.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="106.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кнопка Delete - назавжди видаляє пісню без моживості її відновлення.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="112.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кнопка Clear - очищає весь список вилучених.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="Instruction" animated="false" text="Інструкція" textFill="#1828de">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0d0230;">
+               <children>
+                  <Button layoutX="635.0" layoutY="322.0" mnemonicParsing="false" onAction="#ToMain" prefHeight="47.0" prefWidth="82.0" style="-fx-background-color: #0d0230; -fx-border-color: #5ca5ff;" text="Main" textFill="#5ca5ff">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.3607843220233917" green="0.6470588445663452" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="31.0" layoutY="27.0" text="При додаванні пісні:" textFill="#9342d9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поле з посиланням не є обов'язковим, ви можете додати посилання у будь-який інший момент. Необхідно вибрати стиль із запропонованих, вказати автора та назву, а також задати тривалість у продемонстрованому форматі." wrappingWidth="698.0709648132324">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="31.0" layoutY="130.0" text="Взаємодія з піснями:" textFill="#af71ea">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="При виборі одної з пісень відкриються додаткові кнопки взаємодії (такі як &quot;відтворити&quot;, &quot;вилечити&quot;, &quot;видалити&quot; та &quot;відновити&quot;). Ці дії будуть виконані до вибраної пісні якщо одна з кнопок буде нажатою." wrappingWidth="698.0709648132324">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="31.0" layoutY="243.0" text="Використання посилань:" textFill="#c799f4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Необхідно скопіювати посилання та задати його для пісні, увага: якщо ваше посилання не є дійсним воно автоматично буде вилучене при першій ж можливості. А при введенні його у спеціальному меню взагалі не прийметься. Залишайте послиання на зручний вам сервіс " wrappingWidth="574.8708915710449">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="350.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Авторські права не дотримуються ;)" wrappingWidth="270.0708312988281">
+                     <font>
+                        <Font name="System Italic" size="11.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="About" animated="false" prefHeight="426.0" prefWidth="688.0" text="Про програму" textFill="#8b27dc">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0d0230;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0230" height="409.0" layoutX="21.0" layoutY="16.0" strokeType="INSIDE" strokeWidth="2.0" width="727.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.18526315689086914" green="0.49403509497642517" blue="0.9263157844543457" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.713209867477417" green="0.2518518567085266" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Text fill="WHITE" layoutX="51.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Програма Звукозапис, в ній ви можете збергати та редагувати плейлист із доданих вами композицій. Визначається тривалість усього плейлиста, є функція перестановки композицій залежного від їх стилю. Визначення пісень, довжина яких належить певному діапазону. Програма дає можливість запустити буде-яку з ваших пісень використовуючи зручний для вас онлайн плеєр, варто лише вказати посилання." textAlignment="JUSTIFY" wrappingWidth="667.2033805847168">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="55.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В будь-який момент ви можете вилучити композицію. Всі вилучені вами треки можна легко відновити зі списку вилучних, або ж видалити їх назавжди." textAlignment="JUSTIFY" wrappingWidth="659.7367362976074">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="51.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Для композиції у вашому списку можна додати посилання, на зручне вам джерело. Посилання потрібно залисати лише при першому програванні пісні (або як додатковий параметр при створенні), воно автоматично збережеться та буде прив'язано до вказаної композиції." textAlignment="JUSTIFY" wrappingWidth="567.7367858886719">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <Label alignment="CENTER" layoutX="335.0" layoutY="37.0" text="Основне:" textFill="#398eea">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="244.0" layoutY="281.0" text="Про систему вилечення:" textFill="#3b66f7">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="253.0" layoutY="178.0" text="Використання посилань:" textFill="#304bf7">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="635.0" layoutY="322.0" mnemonicParsing="false" onAction="#ToMain" prefHeight="47.0" prefWidth="82.0" style="-fx-background-color: #0d0230; -fx-border-color: #5ca5ff;" text="Main" textFill="#5ca5ff">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.3607843220233917" green="0.6470588445663452" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+  </panes>
+</Accordion>
